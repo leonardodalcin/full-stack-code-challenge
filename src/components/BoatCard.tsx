@@ -1,18 +1,18 @@
 import React from "react";
 import "./BoatCard.css";
-import { useGetBoatsQuery } from "../generated/graphql";
+import { useGetBoatCardQuery } from "../generated/graphql";
 
 export default function BoatCard() {
-  const { loading, error, data } = useGetBoatsQuery();
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(, {JSON.stringify(error)}</p>;
-  if (data) return <p>data :), {JSON.stringify(data)}</p>;
-
-  return (
-    <div className="BoatCard-grid">
-      <div>BoatPhoto</div>
-      <div>BoatInfo</div>
-    </div>
-  );
+  const { data } = useGetBoatCardQuery();
+  if (data?.getBoats[0]) {
+    return (
+      <div className="BoatCard-grid">
+        <div>{data.getBoats[0].imageUrl}</div>
+        <div>{data.getBoats[0].id}}</div>
+      </div>
+    )
+  } else {
+    return null
+  }
+  
 }

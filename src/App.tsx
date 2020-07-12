@@ -4,19 +4,17 @@ import "./App.css";
 import BoatCard from "./components/BoatCard";
 import ApolloClient from "apollo-boost";
 
-const client = new ApolloClient({
-  uri: "https://sls-sandbox.zizoo.com/graphql"
-});
 function App() {
+  const client = new ApolloClient({
+    uri: "https://sls-sandbox.zizoo.com/graphql"
+  });
   return (
-    <div>
-      <ApolloProvider client={client}>
-        <div className="App-grid">
-          <div>sidemenu</div>
-          <BoatCard></BoatCard>
-        </div>
-      </ApolloProvider>
-    </div>
+    <ApolloProvider client={client}>
+      <div className="App-grid">
+        <div>sidemenu</div>
+        <BoatCard></BoatCard>
+      </div>
+    </ApolloProvider>
   );
 }
 

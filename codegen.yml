@@ -8,6 +8,8 @@ generates:
       - "typescript-operations"
       - "typescript-react-apollo"
     config:
+      skipTypename: true
+      preResolveTypes: true
       withHooks: true
       withComponent: false
       withHOC: false

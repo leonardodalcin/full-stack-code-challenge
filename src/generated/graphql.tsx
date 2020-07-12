@@ -15,7 +15,6 @@ export type Scalars = {
 };
 
 export type Query = {
-  __typename?: 'Query';
   getBoats: Array<Boat>;
 };
 
@@ -29,7 +28,6 @@ export type GetBoatInput = {
 };
 
 export type Boat = {
-  __typename?: 'Boat';
   id: Scalars['ID'];
   name?: Maybe<Scalars['String']>;
   type?: Maybe<BoatTypeEnum>;
@@ -58,7 +56,6 @@ export enum BoatTypeEnum {
 }
 
 export type BoatReview = {
-  __typename?: 'BoatReview';
   total?: Maybe<Scalars['Int']>;
   score?: Maybe<Scalars['Float']>;
 };
@@ -75,20 +72,14 @@ export enum CacheControlScope {
   Private = 'PRIVATE'
 }
 
-export type GetBoatsQueryVariables = Exact<{ [key: string]: never; }>;
+export type GetBoatCardQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetBoatsQuery = (
-  { __typename?: 'Query' }
-  & { getBoats: Array<(
-    { __typename?: 'Boat' }
-    & Pick<Boat, 'id' | 'imageUrl'>
-  )> }
-);
+export type GetBoatCardQuery = { getBoats: Array<{ id: string, imageUrl?: Maybe<string> }> };
 
 
-export const GetBoatsDocument = gql`
-    query getBoats {
+export const GetBoatCardDocument = gql`
+    query getBoatCard {
   getBoats {
     id
     imageUrl
@@ -97,26 +88,26 @@ export const GetBoatsDocument = gql`
     `;
 
 /**
- * __useGetBoatsQuery__
+ * __useGetBoatCardQuery__
  *
- * To run a query within a React component, call `useGetBoatsQuery` and pass it any options that fit your needs.
- * When your component renders, `useGetBoatsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * To run a query within a React component, call `useGetBoatCardQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetBoatCardQuery` returns an object from Apollo Client that contains loading, error, and data properties
  * you can use to render your UI.
  *
  * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
  *
  * @example
- * const { data, loading, error } = useGetBoatsQuery({
+ * const { data, loading, error } = useGetBoatCardQuery({
  *   variables: {
  *   },
  * });
  */
-export function useGetBoatsQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<GetBoatsQuery, GetBoatsQueryVariables>) {
-        return ApolloReactHooks.useQuery<GetBoatsQuery, GetBoatsQueryVariables>(GetBoatsDocument, baseOptions);
+export function useGetBoatCardQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<GetBoatCardQuery, GetBoatCardQueryVariables>) {
+        return ApolloReactHooks.useQuery<GetBoatCardQuery, GetBoatCardQueryVariables>(GetBoatCardDocument, baseOptions);
       }
-export function useGetBoatsLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<GetBoatsQuery, GetBoatsQueryVariables>) {
-          return ApolloReactHooks.useLazyQuery<GetBoatsQuery, GetBoatsQueryVariables>(GetBoatsDocument, baseOptions);
+export function useGetBoatCardLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<GetBoatCardQuery, GetBoatCardQueryVariables>) {
+          return ApolloReactHooks.useLazyQuery<GetBoatCardQuery, GetBoatCardQueryVariables>(GetBoatCardDocument, baseOptions);
         }
-export type GetBoatsQueryHookResult = ReturnType<typeof useGetBoatsQuery>;
-export type GetBoatsLazyQueryHookResult = ReturnType<typeof useGetBoatsLazyQuery>;
-export type GetBoatsQueryResult = ApolloReactCommon.QueryResult<GetBoatsQuery, GetBoatsQueryVariables>;
+export type GetBoatCardQueryHookResult = ReturnType<typeof useGetBoatCardQuery>;
+export type GetBoatCardLazyQueryHookResult = ReturnType<typeof useGetBoatCardLazyQuery>;
+export type GetBoatCardQueryResult = ApolloReactCommon.QueryResult<GetBoatCardQuery, GetBoatCardQueryVariables>;
