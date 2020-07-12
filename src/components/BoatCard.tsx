@@ -5,10 +5,11 @@ import { useGetBoatCardQuery } from "../generated/graphql";
 export default function BoatCard() {
   const { data } = useGetBoatCardQuery();
   if (data?.getBoats[0]) {
+    const boat = data?.getBoats[0]
     return (
       <div className="BoatCard-grid">
-        <div>{data.getBoats[0].imageUrl}</div>
-        <div>{data.getBoats[0].id}}</div>
+        <img src={boat.imageUrl!} alt="Boat"></img>
+        <div>{boat.id}</div>
       </div>
     )
   } else {
