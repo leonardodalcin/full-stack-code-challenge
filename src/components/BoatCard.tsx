@@ -16,19 +16,21 @@ export default function BoatCard() {
         <div className={'Info-grid'}>
           {/*left side*/}
           <div>
-            <div>{boat.name} / {boat.year}</div>
-            <div>{boat.reviews!.score} / Read Reviews</div>
-            <div>Skipper: {boat.skipper}</div>
-            <div>Cabins: {boat.cabins}</div>
-            <div>Guests: Up to {boat.guests}</div>
+            <h1 className="color-blue">{boat.name} / {boat.year}</h1>
+            <div><div className="color-yellow">
+              {boat.reviews!.score}
+            </div> <div className="color-grey"> Read Reviews</div></div>
+            <div className="color-black">Skipper: {boat.skipper}</div>
+            <div className="color-black">Cabins: {boat.cabins}</div>
+            <div className="color-black">Guests: Up to {boat.guests}</div>
           </div>
           {/*right side*/}
           <div>
-            <div>€{boat.price}/Day</div>
-            <div>{boat.locality}, {boat.country}</div>
-            <div>Length: {boat.length}m</div>
-            <div>Instant booking</div>
-            <div>View Details</div>
+            <h1 className="color-blue">€{boat.price}/Day</h1>
+            <div className="color-grey">{boat.locality}, {boat.country}</div>
+            <div className="color-black">Length: {boat.length}m</div>
+            <div className="color-green">Instant booking</div>
+            <button className="background-blue color-white">View Details</button>
           </div>
         </div>
       </div>

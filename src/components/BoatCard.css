@@ -7,7 +7,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-
+.background-blue {
+  background-color: #34bef8;
+}
 .color-blue {
   color: #34bef8;
 }
@@ -25,4 +27,7 @@
 }
 .color-green {
   color: #00bc78;
+}
+.color-white {
+  color: white;
 }
