@@ -7,3 +7,22 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
+.color-blue {
+  color: #34bef8;
+}
+.color-red {
+  color: #f33d4a;
+}
+.color-back {
+  color: #020202;
+}
+.color-yellow {
+  color: #ffbf00;
+}
+.color-grey {
+  color: #828281;
+}
+.color-green {
+  color: #00bc78;
+}
