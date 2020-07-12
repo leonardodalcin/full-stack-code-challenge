@@ -1,0 +1,6 @@
+query getBoats {
+    getBoats {
+        id
+        imageUrl
+    }
+}
