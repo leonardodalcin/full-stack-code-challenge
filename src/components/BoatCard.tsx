@@ -9,7 +9,24 @@ export default function BoatCard() {
     return (
       <div className="BoatCard-grid">
         <img src={boat.imageUrl!} alt="Boat"></img>
-        <div>{boat.id}</div>
+        <div className={'Info-grid'}>
+          {/*left side*/}
+          <div>
+            <div>{boat.type} / {boat.length} / {boat.name} / {boat.year}</div>
+            <div>{boat.reviews!.score} / Read Reviews</div>
+            <div>Skipper: {boat.skipper}</div>
+            <div>Cabins: {boat.cabins}</div>
+            <div>Guests: Up to {boat.guests}</div>
+          </div>
+          {/*right side*/}
+          <div>
+            <div>€{boat.price}/Day</div>
+            <div>{boat.locality}, {boat.country}</div>
+            <div>Length: {boat.length}m</div>
+            <div>Instant booking</div>
+            <div>View Details</div>
+          </div>
+        </div>
       </div>
     )
   } else {

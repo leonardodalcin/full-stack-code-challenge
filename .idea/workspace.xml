@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="824f0335-f2ce-4880-a178-2d6624d806ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BoatCard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BoatCard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/BoatCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BoatCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/getBoats.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/getBoats.graphql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generated/graphql.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/generated/graphql.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

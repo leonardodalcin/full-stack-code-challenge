@@ -75,13 +75,29 @@ export enum CacheControlScope {
 export type GetBoatCardQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetBoatCardQuery = { getBoats: Array<{ id: string, imageUrl?: Maybe<string> }> };
+export type GetBoatCardQuery = { getBoats: Array<{ id: string, name?: Maybe<string>, type?: Maybe<BoatTypeEnum>, year?: Maybe<number>, marina?: Maybe<string>, locality?: Maybe<string>, country?: Maybe<string>, skipper?: Maybe<SkipperTypeEnum>, active?: Maybe<boolean>, cabins?: Maybe<number>, guests?: Maybe<number>, length?: Maybe<number>, price?: Maybe<number>, imageUrl?: Maybe<string>, reviews?: Maybe<{ score?: Maybe<number>, total?: Maybe<number> }> }> };
 
 
 export const GetBoatCardDocument = gql`
     query getBoatCard {
   getBoats {
     id
+    name
+    type
+    year
+    reviews {
+      score
+      total
+    }
+    marina
+    locality
+    country
+    skipper
+    active
+    cabins
+    guests
+    length
+    price
     imageUrl
   }
 }
