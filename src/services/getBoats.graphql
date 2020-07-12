@@ -1,22 +1,22 @@
 query getBoatCard {
-    getBoats {
-        id
-        name
-        type
-        year
-        reviews {
-            score
-            total
-        }
-        marina
-        locality
-        country
-        skipper
-        active
-        cabins
-        guests
-        length
-        price
-        imageUrl
+  getBoats {
+    id
+    name
+    type
+    year
+    reviews {
+      score
+      total
     }
+    marina
+    locality
+    country
+    skipper
+    active
+    cabins
+    guests
+    length
+    price
+    imageUrl
+  }
 }
